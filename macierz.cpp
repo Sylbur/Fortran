@@ -21,15 +21,18 @@ int main(){
         cout << "================================================\n Menu\n================================================\n 1. Mnozenie macierzy 10x10\n 2. wyjscie z programu\n Wybierz opcje: ";
         cin >> menu;
         cout << endl;
-        if(menu == 2){
-            break;
+
+        switch( menu ){
+            case 1:
+                multiplication();
+                break;
+            case 2:
+                return 0;
+                break;
+            default:
+                cout << "Liczba z poza zakresu\n\n";
+                break;
         }
-        if(menu == 1){
-            multiplication();
-        }
-        cout << "\nWcisnij Enter by wyczyscic ekran i przejsc do menu";
-        cin >> menu;
-        system("cls");
     }
 
     return 0;
