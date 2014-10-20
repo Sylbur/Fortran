@@ -2,6 +2,9 @@ PROGRAM Mnozenie
 	integer, parameter :: X = 10;
 	integer, parameter :: Y = 10;
 	integer :: menu, n;
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	integer :: m1(10,10), m2(10,10), w(10,10), i=0, j=0, k=0, tmp=0;
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	
 	do
 		write (*,*) '================================================'
@@ -17,13 +20,20 @@ PROGRAM Mnozenie
 				print *, "Do zrobienia"
                !n=multiplication( );
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!    
+	
+	
+!	call init_random_seed() ! see example of random_seed
+!	call random_number(w)
+	
+!	print *, w(3,5)
+    
     i=0;
     do
 		j=0;
     	do
-            m1(i,j) = 1;
-            m2(i,j) = 1;
-            j=j+j;
+!			m1(i,j) = 1;
+!			m2(i,j) = 1;
+            j=j+1;
             if(j == Y) exit
         end do
         
@@ -49,13 +59,6 @@ end function
 
 real function multiplication( )
 
-	integer :: m1(10,10), m2(10,10), w(10,10), i=0, j=0, k=0, tmp=0;
-	
-!	call init_random_seed() ! see example of random_seed
-!	call random_number(w)
-	
-!	print *, w(3,5)
-    
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
