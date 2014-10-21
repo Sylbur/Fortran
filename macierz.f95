@@ -3,7 +3,7 @@ PROGRAM Mnozenie
 	integer, parameter :: Y = 10;
 	integer :: menu, n;
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	integer :: m1(10,10), m2(10,10), w(10,10), i=0, j=0, k=0, tmp=0;
+	integer :: m1(10,10), m2(10,10),w(10,10), i=0, j=0, k=0, tmp=0;
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	
 	do
@@ -35,6 +35,29 @@ PROGRAM Mnozenie
 !			m2(i,j) = 1;
             j=j+1;
             if(j == Y) exit
+        end do
+        
+        i=i+1;
+        if(i == X) exit
+    end do
+
+    i=0;
+    do
+		j=0;
+    	do
+        	k=0;
+			do
+!				tmp = tmp + m1(i,k) * m2(k,j);
+                k=k+1;
+               	if(k == X) then !POTEM POPRAWI
+!					w(i,j) = tmp;
+                    tmp = 0;
+               		exit
+                end if
+           	end do
+            
+			j=j+1;
+        	if(j == Y) exit
         end do
         
         i=i+1;
