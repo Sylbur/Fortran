@@ -8,6 +8,7 @@
 
 void print_for_multiplication(int tab[X][Y]);
 void multiplication();
+void metoda_lu();
 
 using namespace std;
 
@@ -18,16 +19,19 @@ int main(){
     int menu;
 
     while(1){
-        cout << "================================================\n Menu\n================================================\n 1. Mnozenie macierzy 10x10\n 2. wyjscie z programu\n Wybierz opcje: ";
+        cout << "================================================\n Menu\n================================================\n 1. Mnozenie macierzy 10x10\n 2. Metoda LU\n 0. wyjscie z programu\n Wybierz opcje: ";
         cin >> menu;
         cout << endl;
 
         switch( menu ){
+            case 0:
+                return 0;
+                break;
             case 1:
                 multiplication();
                 break;
             case 2:
-                return 0;
+                metoda_lu();
                 break;
             default:
                 cout << "Liczba z poza zakresu\n\n";
@@ -42,7 +46,6 @@ void print_for_multiplication(int tab[X][Y]){
 
     int i=0, j=0;
 
-    //cout << "--                   --\n";
     i=0;
     while(1){
         cout << "| ";
@@ -61,7 +64,6 @@ void print_for_multiplication(int tab[X][Y]){
             break;
         }
     }
-    //cout << "--                   --";
 }
 
 void multiplication(){
@@ -118,4 +120,9 @@ void multiplication(){
     print_for_multiplication(m2);
     cout << " =\n";
     print_for_multiplication(w);
+}
+
+void metoda_lu(){
+
+    cout << "Opcja dostepna w krotce\n\n";
 }
